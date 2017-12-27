@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>EE CM</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script>
+			function getParameterByName(name, url) {
+				if (!url) url = window.location.href;
+				name = name.replace(/[\[\]]/g, "\\$&");
+				var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+				results = regex.exec(url);
+				if (!results) return null;
+				if (!results[2]) return '';
+				return decodeURIComponent(results[2].replace(/\+/g, " "));
+			}
+			var ee_roomname = getParameterByName('room');
+			var iseecom = true;
+			var load_user = getParameterByName('user');
+		</script>
+	</head>
+	<body>
+		<div id="header">
+			<img src="logo.png" alt="Logo">
+		</div>
+		<div id="game">
+			<object width="850" height="500" id="eetest" data="https://r.playerio.com/r/eehw11-uzvrgq6urkyo6tdtrgm1ra/new_game.swf">
+				<param name="movie" value="https://r.playerio.com/r/eehw11-uzvrgq6urkyo6tdtrgm1ra/new_game.swf" />
+				<param name="quality" value="high" />
+				<param name="play" value="true" />
+				<param name="scale" value="showall" />
+				<param name="allowScriptAccess" value="always" />
+				<param name="allowFullScreen" value="true" />
+				<param name="allowFullScreenInteractive" value="true" />
+				<embed src="https://r.playerio.com/r/eehw11-uzvrgq6urkyo6tdtrgm1ra/new_game.swf"
+					width="850px" height="500px"
+					quality="high"
+					bgcolor="#000000"
+					allowscriptaccess="always"
+					allowfullscreen="true"
+					allowfullscreeninteractive="true"
+					type="application/x-shockwave-flash"
+					pluginspage="http://www.macromedia.com/go/getflashplayer"
+					wmode="direct"></embed>
+			</object>
+		</div>
+		<div id="footer">
+			<p><a href="faq.html">FAQ</a> | <a href="https://github.com/HabboGame/EE_CM_server">Server Source</a> | <a href="http://krock-works.16mb.com/forum/viewtopic.php?id=124">Credits</a> | <a href="https://discord.gg/mvqPZ8s">Discord Server</a></p>
+		</div>
+	</body>
+</html>
